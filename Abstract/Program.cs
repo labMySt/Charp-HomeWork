@@ -23,9 +23,11 @@ namespace Abstruct
     {
         static void Main(string[] args)
         {
-            Bottle[] box = DrinkMaker.GetBox();
-
-
+             Bottle[] box = DrinkMaker.GetBox();
+            //Bottle box = new Karavan();
+            //box.Valume(0.5);
+            //Console.WriteLine(box.ToString());
+            Console.ReadKey();
         }
 
     }

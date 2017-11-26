@@ -5,15 +5,14 @@ namespace Abstruct
 {
     public class CocaColaBottle: Bottle
     {
-        public override float Valume
+
+        public override double Valume (double value)
         {
-            get { return Valume; }
-            set
-            {
-                if (value == 0.5 || value == 1 || value == 2) Valume = value;
+            if(value == _valume || value == 0) return _valume;
 
-            }
-
+            if (value == 0.5 || value == 1 || value == 2) _valume = value;
+            return _valume;
+            
         }
 
         private int _typeOfCoca;
@@ -40,7 +39,7 @@ namespace Abstruct
 
         public override string ToString()
         {
-            return $"CocaCola: {Valume}, {Type}, {TypeOfCoca}, Label: {isLabel}";
+            return $"CocaCola: {Valume(_valume)}, {Type}, {TypeOfCoca}, Label: {isLabel}";
         }
     }
 }

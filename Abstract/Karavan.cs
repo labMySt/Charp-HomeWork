@@ -1,36 +1,25 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Abstruct
 {
     public class Karavan : Bottle
     {
-        public override float Valume
+
+        public override double Valume(double value)
         {
-            get
-            {
-                if (Valume == 1) return (float)0.5;
-                else if (Valume == 2) return (float) 1.5;
+            if (value == _valume || value == 0) return _valume;
 
-
-                return 0;
-            } 
-
-
-            set
-            {
-                if (value == 0.5 || value == 1.5) Valume = value;
-            }
+            if (value == 0.5 || value == 1.5) _valume = value;
+            return _valume;
         }
-
-
-
-        protected string isLavel = "yes";
+       
 
         protected string Type = "plastic";
 
         public override string ToString()
         {
-            return $"Karavan: {Valume}, {Type},Labal: {isLavel}";
+            return $"Karavan: {Valume(_valume)}, {Type},Labal: Yes";
         }
     }
     

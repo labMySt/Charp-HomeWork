@@ -2,8 +2,10 @@
 {
     public abstract class Bottle
     {
-        public abstract float  Valume { set; get; }
-
+        protected  double _valume;
+        public abstract double Valume(double valuve);
+            
+       
         private string _type;
         public string Type
         {
