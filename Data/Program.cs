@@ -15,13 +15,19 @@ namespace TypeDate
             date.sourse.year = 2017;
             date.sourse.month = 11;
 
-            date.PrintDate();
+            date.ToString();
 
             EvroDate date1 = new EvroDate();
 
             date1.sourse = date.sourse;
 
-            date1.PrintDate();
+            date1.ToString();
+            АmericanData date2 = new АmericanData();
+            date2.sourse = date.sourse;
+
+            date2.ToString();
+         
+
 
 
             Console.ReadKey();

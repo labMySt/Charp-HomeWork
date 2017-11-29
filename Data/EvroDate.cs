@@ -7,9 +7,21 @@ using System.Threading.Tasks;
 namespace TypeDate
 {
     class EvroDate: UkrainianDate
-    {
-        char delimiter = ',';
-        
+    { 
+    
+        public EvroDate()
+        {
+            delimiter = ',';
+        }
+
+
+        public override string ToString()
+ 
+        {
+            Console.WriteLine($"{sourse.day}{delimiter}{sourse.month}{delimiter}{sourse.year}");
+            return $"{sourse.day}{delimiter}{sourse.month}{delimiter}{sourse.year}";
+        }
+
     }
      
 

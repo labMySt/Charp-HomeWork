@@ -9,11 +9,17 @@ namespace TypeDate
     class UkrainianDate
     {
         public Date sourse = new Date();
-        char delimiter = '.';
+        protected char delimiter;
 
-        public void PrintDate()
+        public UkrainianDate()
+        {
+            delimiter = '.';
+        }
+
+        public override string ToString()
         {
             Console.WriteLine($"{sourse.day}{delimiter}{sourse.month}{delimiter}{sourse.year}");
+            return $"{sourse.day}{delimiter}{sourse.month}{delimiter}{sourse.year}";
         }
     }
 }
